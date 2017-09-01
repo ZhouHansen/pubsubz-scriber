@@ -1,0 +1,71 @@
+.container{
+	margin-top:20px;
+}
+
+#save{
+	float: right
+}
+
+#save:focus,
+#fetch:focus{
+	outline:0 !important;
+}
+
+div.spinner{
+  display:none;
+}
+
+.flex-box{
+	display: flex;
+}
+
+.draw{
+	margin-top: 30px;
+	display: inline-block;
+}
+.draw button{
+	display: block;
+	margin-bottom: 20px;
+	float: left;
+	clear: both;
+}
+
+.draw #remove{
+	margin-bottom: 300px;
+}
+
+.canvaswrap{
+	overflow: hidden;
+	margin-left: 15px;
+	margin-top: 30px;
+	display: inline-block;
+	flex-grow: 1;
+	border:2px solid #eee;
+	position: relative;
+}
+
+canvas{
+	position: absolute;
+	top:0;
+	cursor: crosshair;
+}
+
+#canvas.unable{
+	cursor:not-allowed;
+}
+
+#canvas.remove{
+	cursor: url("../assets/remove.png"), auto;
+}
+
+#canvas.ctrlline{
+	cursor: url("../assets/ctrlline.png"), auto;
+}
+
+#canvas.move{
+	cursor: move
+}
+
+
+
+

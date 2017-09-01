@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="app/vendor/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="shortcut icon" type="image/x-icon" href="shama.ico">
+<link href="css/spinner.css" rel="stylesheet" media="screen">
+<link href="css/style.css" rel="stylesheet" media="screen">
+<title>Sketch</title>
+</head>
+<body>
+<div class="container">
+
+    <button type="button" class="btn btn-outline-primary crud" id="fetch">Fetch<div class="spinner"></div></button>
+    <button type="button" class="btn btn-outline-warning crud" id="save">Save</button>
+
+    <div class="flex-box">
+
+      <div class="draw">
+        <button type="button" class="btn btn-outline-success" id="line">画线</button>
+        <button type="button" class="btn btn-outline-success" id="ctrlline">选点</button>
+        <button type="button" class="btn btn-outline-success" id="move">移动</button>
+        <button type="button" class="btn btn-outline-danger" id="remove">删除</button>
+      </div>
+
+      <div class="canvaswrap">
+        <canvas width="1050" height="1000" id="canvas"></canvas>
+      </div>
+    </div>
+</div>
+
+<script type="text/template" class="spinner">
+  <div class="sk-circle">
+  <div class="sk-circle1 sk-child"></div>
+  <div class="sk-circle2 sk-child"></div>
+  <div class="sk-circle3 sk-child"></div>
+  <div class="sk-circle4 sk-child"></div>
+  <div class="sk-circle5 sk-child"></div>
+  <div class="sk-circle6 sk-child"></div>
+  <div class="sk-circle7 sk-child"></div>
+  <div class="sk-circle8 sk-child"></div>
+  <div class="sk-circle9 sk-child"></div>
+  <div class="sk-circle10 sk-child"></div>
+  <div class="sk-circle11 sk-child"></div>
+  <div class="sk-circle12 sk-child"></div>
+</div>
+</script>
+
+<script>
+Function.prototype.method = function(name,func){
+  if (!this.prototype.name){
+    this.prototype[name] = func
+  }
+
+  return this
+}
+</script>
+
+<script src="app/vendor/jquery.min.js"></script>
+<script src="app/vendor/underscore-min.js"></script>
+<script src="app/vendor/easeljs-0.8.2.min.js"></script>
+<script src="app/vendor/tweenjs-0.6.2.min.js"></script>
+<script src="app/vendor/pubsubz.js"></script>
+<script src="app/vendor/model-min.js"></script>
+<script src="app/views/common/status.js"></script>
+<script src="app/views/common/cursor.js"></script>
+<script src="app/views/line.js"></script>
+<script src="app/views/ctrlline.js"></script>
+<script src="app/views/remove.js"></script>
+<script src="app/views/move.js"></script>
+<script src="app/model.js"></script>
+<script src="app/controller.js"></script>
+</body>
+</html>
